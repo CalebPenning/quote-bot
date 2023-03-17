@@ -1,0 +1,21 @@
+{
+  "name": "first-bot",
+  "version": "1.0.0",
+  "description": "discord bot for taking polls",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "typescript": "^5.0.2"
+  }
+}
