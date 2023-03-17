@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "dev": "tsc && node .",
+    "deploy": "tsc && node ./dist/deploy-command.js"
   },
   "author": "",
   "license": "ISC",
