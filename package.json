@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "dev": "tsc && node .",
-    "deploy": "tsc && node ./dist/deploy-command.js",
+    "dev": "npx tsc && node .",
+    "deploy": "npx tsc && node ./dist/deploy-command.js",
     "start": "npm install && npm run deploy && npm run dev"
   },
   "author": "",
