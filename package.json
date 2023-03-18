@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "dev": "node .",
+    "startBot": "node .",
     "deploy": "node ./dist/deploy-command.js",
     "postinstall": "tsc",
-    "start": "npm install && npm run deploy && npm run dev"
+    "start": "npm run deploy && npm run startBot"
   },
   "author": "",
   "license": "ISC",
