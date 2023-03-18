@@ -19,4 +19,6 @@ export default [
 	"skating",
 	"*holds knife to throat* DON'T YOU *EVER* TOUCH ME AGAIN",
 	"I can see the clouds moving..."
+	"I could model for apple sauce",
+	"Well ya should've ate it!",
 ]
