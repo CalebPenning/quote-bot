@@ -5,7 +5,7 @@ export default [
 	"*licks knife*",
 	"*threatens to pour 'The Concoction' on you*",
 	"Scientists studied it, dude",
-	"My brother totally invented \"Your face\"",
+	'My brother totally invented "Your face"',
 	"Bro... Jane is so hot.",
 	"That's some rope ass chicken",
 	"Be right back, I gotta call my mom.\n*Hey, mom... I just wanted to call and say that I love you...*\nI'm back. *wipes tears*",
