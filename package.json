@@ -12,6 +12,7 @@
     "dev": "nodemon .",
     "deploy": "node ./dist/deploy-command.js",
     "postinstall": "tsc",
+    "rebuild": "tsc && npm start",
     "start": "npm run deploy && npm run startBot"
   },
   "author": "",
