@@ -8,7 +8,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "dev": "tsc && node .",
-    "deploy": "tsc && node ./dist/deploy-command.js"
+    "deploy": "tsc && node ./dist/deploy-command.js",
+    "start": "npm run deploy && npm run dev"
   },
   "author": "",
   "license": "ISC",

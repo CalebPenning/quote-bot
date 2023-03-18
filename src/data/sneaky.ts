@@ -4,4 +4,6 @@ export default [
 	"*holds knife to throat*",
 	"*licks knife*",
 	"*threatens to pour 'The Concoction' on you*",
+	"Scientists studied it, dude",
+	"My brother totally invented 'Your face'",
 ]
