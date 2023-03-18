@@ -2,12 +2,19 @@ import * as dotenv from "dotenv"
 import { Client, Events, GatewayIntentBits, Collection } from "discord.js"
 import fs from "fs"
 import path from "path"
+import keywords from "./data/keywords"
 
 // expose environment variables
 dotenv.config()
 const token = process.env.DISCORD_TOKEN
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] })
+const client = new Client({
+	intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.MessageContent,
+	],
+})
 
 client.commands = new Collection()
 
@@ -32,11 +39,19 @@ client.once(Events.ClientReady, (c) => {
 	console.log(`Ready! Logged in as ${c.user.tag}`)
 })
 
-client.on(Events.MessageCreate, (message) => {})
+client.on(Events.MessageCreate, async (message) => {
+	if (!message.content) return
+
+	for (let keyword of keywords) {
+		if (message.content.toLowerCase().includes(keyword)) {
+			await client.commands.get("sneaky").execute(message)
+			return
+		}
+	}
+})
 
 client.on(Events.InteractionCreate, async (interaction) => {
 	if (!interaction.isChatInputCommand()) return
-
 	const command = client.commands.get(interaction.commandName)
 
 	if (!command) return

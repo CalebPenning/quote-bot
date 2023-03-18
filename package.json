@@ -8,8 +8,11 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "startBot": "node .",
+    "predev": "tsc",
+    "dev": "nodemon .",
     "deploy": "node ./dist/deploy-command.js",
     "postinstall": "tsc",
+    "rebuild": "tsc && npm start",
     "start": "npm run deploy && npm run startBot"
   },
   "author": "",
@@ -19,6 +22,7 @@
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
+    "nodemon": "^2.0.21",
     "prettier": "^2.8.4",
     "typescript": "^5.0.2"
   }
