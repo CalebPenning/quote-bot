@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "startBot": "node .",
+    "startBot": "node ./dist/index.js",
     "deploy": "node ./dist/deploy-command.js",
     "postinstall": "tsc",
     "start": "npm run deploy && npm run startBot"
