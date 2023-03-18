@@ -6,4 +6,6 @@ export default [
 	"*threatens to pour 'The Concoction' on you*",
 	"Scientists studied it, dude",
 	"My brother totally invented 'Your face'",
+	"I could model for apple sauce",
+	"Well ya should've ate it!",
 ]
