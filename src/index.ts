@@ -42,7 +42,8 @@ client.once(Events.ClientReady, (c) => {
 client.on(Events.MessageCreate, async (message) => {
 	if (!message.content) return
 
-	const keywords = await getAllKeywords()
+	const { keywords } = await getAllKeywords()
+	console.log(keywords)
 	for (let keyword of keywords) {
 		if (message.content.toLowerCase().includes(keyword.body)) {
 			await client.commands.get("sneaky").execute(message)

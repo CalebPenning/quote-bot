@@ -8,8 +8,9 @@ module.exports = {
 		.setDescription("Replies with a random sneaky quote"),
 
 	async execute(interaction: RepliableInteraction) {
-		const quotes = await getAllQuotes()
+		const { quotes } = await getAllQuotes()
+		console.log(quotes)
 		const randomIdx = Math.floor(Math.random() * quotes.length)
-		await interaction.reply(quotes[randomIdx])
+		await interaction.reply(quotes[randomIdx].body)
 	},
 }
