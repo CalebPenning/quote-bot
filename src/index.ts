@@ -2,7 +2,7 @@ import * as dotenv from "dotenv"
 import { Client, Events, GatewayIntentBits, Collection } from "discord.js"
 import fs from "fs"
 import path from "path"
-import getAllKeywords from "./db/keywords"
+import getAllKeywords from "./api/keywords"
 
 // expose environment variables
 dotenv.config()

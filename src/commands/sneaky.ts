@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from "discord.js"
 import type { RepliableInteraction } from "discord.js"
-import sql from "../db/db"
+import getAllQuotes from "../api/quotes"
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -8,7 +8,7 @@ module.exports = {
 		.setDescription("Replies with a random sneaky quote"),
 
 	async execute(interaction: RepliableInteraction) {
-		const quotes = await sql`select * from quotes`
+		const quotes = await getAllQuotes()
 		const randomIdx = Math.floor(Math.random() * quotes.length)
 		await interaction.reply(quotes[randomIdx])
 	},
