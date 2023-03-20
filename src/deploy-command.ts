@@ -1,5 +1,5 @@
 import { REST, Routes } from "discord.js"
-import * as dotenv from "dotenv"
+import dotenv from "dotenv"
 import fs from "fs"
 import path from "path"
 
