@@ -2,7 +2,7 @@ import * as dotenv from "dotenv"
 import { Client, Events, GatewayIntentBits, Collection } from "discord.js"
 import fs from "fs"
 import path from "path"
-import keywords from "./data/keywords"
+import getAllKeywords from "./db/keywords"
 
 // expose environment variables
 dotenv.config()
@@ -42,8 +42,9 @@ client.once(Events.ClientReady, (c) => {
 client.on(Events.MessageCreate, async (message) => {
 	if (!message.content) return
 
+	const keywords = await getAllKeywords()
 	for (let keyword of keywords) {
-		if (message.content.toLowerCase().includes(keyword)) {
+		if (message.content.toLowerCase().includes(keyword.body)) {
 			await client.commands.get("sneaky").execute(message)
 			return
 		}
